@@ -1,0 +1,116 @@
+import { StyleSheet } from 'react-native';
+import { Colors, Spacing, BorderRadius, Typography, Shadows } from './GlobalStyles';
+
+export const CameraStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: Spacing.xl,
+    paddingTop: Spacing.xl,
+    paddingBottom: Spacing.lg,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.surface,
+  },
+  headerLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  statusDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: Spacing.md,
+  },
+  headerTitle: {
+    ...Typography.h3,
+  },
+  fullscreenButton: {
+    padding: Spacing.sm,
+    borderRadius: BorderRadius.sm,
+    backgroundColor: Colors.accentLight,
+  },
+  statusCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.md,
+    backgroundColor: Colors.secondaryLight,
+    marginHorizontal: Spacing.xl,
+    marginTop: Spacing.lg,
+    borderRadius: BorderRadius.sm,
+  },
+  statusText: {
+    color: Colors.textSecondary,
+    fontSize: 12,
+    marginLeft: Spacing.sm,
+    fontWeight: '500',
+  },
+  cameraContainer: {
+    marginHorizontal: Spacing.xl,
+    marginTop: Spacing.xl,
+    borderRadius: BorderRadius.lg,
+    overflow: 'hidden',
+    backgroundColor: Colors.black,
+  },
+  fullscreenContainer: {
+    margin: 0,
+    borderRadius: 0,
+    flex: 1,
+  },
+  cameraFrame: {
+    position: 'relative',
+    aspectRatio: 4 / 3,
+    width: '100%',
+    borderRadius: BorderRadius.md,
+    overflow: 'hidden',
+    ...Shadows.large,
+  },
+  webview: {
+    flex: 1,
+  },  
+  frameOverlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    pointerEvents: 'none',
+  },
+  corner: {
+    position: 'absolute',
+    width: 20,
+    height: 20,
+    borderColor: Colors.primary,
+    top: 12,
+    left: 12,
+    borderTopWidth: 2,
+    borderLeftWidth: 2,
+  },
+  topRight: {
+    right: 12,
+    left: 'auto' as any,
+    borderRightWidth: 2,
+    borderLeftWidth: 0,
+  },
+  bottomLeft: {
+    bottom: 12,
+    top: 'auto' as any,
+    borderBottomWidth: 2,
+    borderTopWidth: 0,
+  },
+  bottomRight: {
+    bottom: 12,
+    right: 12,
+    top: 'auto' as any,
+    left: 'auto' as any,
+    borderBottomWidth: 2,
+    borderRightWidth: 2,
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+  },
+});
